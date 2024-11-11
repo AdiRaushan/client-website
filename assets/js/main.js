@@ -71,3 +71,49 @@ function slideImage() {
 }
 
 window.addEventListener("resize", slideImage);
+
+/* FAQ */
+const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+for (const item of faqItems) {
+  const onClick = () => {
+    item.classList.toggle("active");
+  };
+  item.addEventListener("click", onClick);
+}
+
+/* index  */
+const imgBox = document.querySelector(".card-img");
+const slides = imgBox.getElementsByTagName("img");
+const textContent = document.querySelector(".text-content");
+const textData = textContent.getElementsByTagName("div");
+
+let currentIndex = 0; // Track the current slide index
+
+// Function to show the slide based on the index
+function showSlide(index) {
+  // Hide all slides and text data
+  for (let slide of slides) {
+    slide.classList.remove("active");
+  }
+  for (let text of textData) {
+    text.classList.remove("active");
+  }
+  // Show the current slide and its corresponding text
+  slides[index].classList.add("active");
+  textData[index].classList.add("active");
+}
+
+// Function to go to the next slide
+function next() {
+  currentIndex = (currentIndex + 1) % slides.length; // Increment index and wrap around
+  showSlide(currentIndex); // Show the slide
+}
+
+// Function to go to the previous slide
+function previuos() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Decrement index and wrap around
+  showSlide(currentIndex); // Show the slide
+}
+
+// Initialize the first slide
+showSlide(currentIndex);

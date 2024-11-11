@@ -16,199 +16,244 @@
     <title>Router-Website</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="nav container">
-        <div class="nav__data">
-          <a href="/assets/pages/index.html" class="nav__logo">Brand Name </a>
-
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-line nav__toggle-menu"></i>
-            <i class="ri-close-line nav__toggle-close"></i>
+    <header id="cs-navigation">
+      <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="cs-logo" aria-label="back to home">
+          <img
+            src="/assets/img/logonew3.png"
+            alt="logo"
+            style="width: 150px; height: auto"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+          <!--Mobile Nav Toggle-->
+          <button class="cs-toggle" aria-label="mobile menu toggle">
+            <div class="cs-box" aria-hidden="true">
+              <span class="cs-line cs-line1" aria-hidden="true"></span>
+              <span class="cs-line cs-line2" aria-hidden="true"></span>
+              <span class="cs-line cs-line3" aria-hidden="true"></span>
+            </div>
+          </button>
+          <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+          <div class="cs-ul-wrapper">
+            <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+              <li class="cs-li">
+                <a href="/assets/pages/index.html" class="cs-li-link cs-active">
+                  Home
+                </a>
+              </li>
+              <li class="cs-li">
+                <a href="/assets/pages/about.html" class="cs-li-link">
+                  About
+                </a>
+              </li>
+              <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+              <li class="cs-li cs-dropdown" tabindex="0">
+                <span class="cs-li-link">
+                  Products
+                  <img
+                    class="cs-drop-icon"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
+                    alt="dropdown icon"
+                    width="15"
+                    height="15"
+                    decoding="async"
+                    aria-hidden="true"
+                  />
+                </span>
+                <ul class="cs-drop-ul">
+                  <li class="cs-drop-li">
+                    <a
+                      href="/assets/pages/product1.html"
+                      class="cs-li-link cs-drop-link"
+                      >Product 1</a
+                    >
+                  </li>
+                  <li class="cs-drop-li">
+                    <a href="" class="cs-li-link cs-drop-link">product 2</a>
+                  </li>
+                  <li class="cs-drop-li">
+                    <a href="./product3.html" class="cs-li-link cs-drop-link"
+                      >product 3</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="cs-li">
+                <a href="/assets/pages/services.html" class="cs-li-link">
+                  Services</a
+                >
+              </li>
+              <li class="cs-li">
+                <a href="/assets/pages/pricing.html" class="cs-li-link">
+                  Plans</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="cs-contact-group">
+          <a href="tel:+84 1985 33 999" class="cs-phone">
+            <img
+              class="cs-phone-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg"
+              alt="logo"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              decoding="async"
+            />
+            +84 1985 33 999
+          </a>
+          <div class="cs-social">
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
           </div>
         </div>
-
-        <!--=============== NAV MENU ===============-->
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li>
-              <a href="/assets/pages/index.html" class="nav__link">Home</a>
-            </li>
-
-            <!--=============== DROPDOWN 1 ===============-->
-            <li class="dropdown__item">
-              <div class="nav__link dropdown__button">
-                <a>Products </a
-                ><i class="ri-arrow-down-s-line dropdown__arrow"></i>
-              </div>
-
-              <div class="dropdown__container">
-                <div class="dropdown__content">
-                  <div class="dropdown__group">
-                    <div class="dropdown__icon">
-                      <i class="ri-flashlight-line"></i>
-                    </div>
-
-                    <span class="dropdown__title">Top Hardware</span>
-
-                    <ul class="dropdown__list">
-                      <li>
-                        <a href="#" class="dropdown__link">Logo Raptor</a>
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link"
-                          >Aegis Smart Security System</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link"
-                          >HyperLink Gigabit Router</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="dropdown__group">
-                    <div class="dropdown__icon">
-                      <i class="ri-heart-3-line"></i>
-                    </div>
-
-                    <span class="dropdown__title">Popular Products </span>
-
-                    <ul class="dropdown__list">
-                      <li>
-                        <a href="#" class="dropdown__link"
-                          >NetBoost Pro Mesh Wi-Fi System</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link">SmartHub 360</a>
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link"
-                          >Omega Residential Wireless Modem</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="dropdown__group">
-                    <div class="dropdown__icon">
-                      <i class="ri-book-mark-line"></i>
-                    </div>
-
-                    <span class="dropdown__title">Use Case</span>
-
-                    <ul class="dropdown__list">
-                      <li>
-                        <a href="#" class="dropdown__link">Esports/Games</a>
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link"
-                          >Streming Unlimated</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link">Travel/Outside</a>
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link"
-                          >Home 5G-Conectivity</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="dropdown__group">
-                    <div class="dropdown__icon">
-                      <i class="ri-file-paper-2-line"></i>
-                    </div>
-
-                    <span class="dropdown__title">Extender</span>
-
-                    <ul class="dropdown__list">
-                      <li>
-                        <a href="#" class="dropdown__link">Extender 1</a>
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link">Extender 2</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <!--=============== DROPDOWN 2 ===============-->
-            <li>
-              <a href="/assets/pages/services.html" class="nav__link"
-                >Services</a
-              >
-            </li>
-
-            <li>
-              <a href="/assets/pages/pricing.html" class="nav__link">Pricing</a>
-            </li>
-
-            <!--=============== DROPDOWN 3 ===============-->
-            <li class="dropdown__item">
-              <div class="nav__link dropdown__button">
-                Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-              </div>
-
-              <div class="dropdown__container">
-                <div class="dropdown__content">
-                  <div class="dropdown__group">
-                    <div class="dropdown__icon">
-                      <i class="ri-community-line"></i>
-                    </div>
-
-                    <span class="dropdown__title">About us</span>
-
-                    <ul class="dropdown__list">
-                      <li>
-                        <a
-                          href="/assets/pages/about.html"
-                          class="dropdown__link"
-                          >About us</a
-                        >
-                      </li>
-                      <li>
-                        <a href="./support.html" class="dropdown__link"
-                          >Support</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link">Contact us</a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="dropdown__group">
-                    <div class="dropdown__icon">
-                      <i class="ri-shield-line"></i>
-                    </div>
-
-                    <span class="dropdown__title">Safety and quality</span>
-
-                    <ul class="dropdown__list">
-                      <li>
-                        <a href="#" class="dropdown__link">Cookie settings</a>
-                      </li>
-                      <li>
-                        <a href="#" class="dropdown__link">Privacy Policy</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+                <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+            </button> -->
+      </div>
     </header>
     <!-- ============================================ -->
     <!--                  Services                    -->
+
     <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    <section id="hero-1785">
+      <div class="cs-container">
+        <div class="cs-content">
+          <span class="cs-topper">Best wireless internet Plans</span>
+          <h1 class="cs-title">Reliable, High-Speed Connectivity</h1>
+          <p class="cs-text">
+            Experience seamless browsing, streaming, and gaming with our advance
+            plans and Get the speed, security, and performance you need for all
+            your internet needs..
+          </p>
+          <div class="cs-button-group">
+            <a href="" class="cs-button-solid cs-button1">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background Image -->
+      <picture class="cs-background">
+        <source
+          media="(max-width: 600px)"
+          src="/assets/img/services banner.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          src="/assets/img/services banner.jpg"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/assets/img/services banner.jpg"
+          alt="field"
+          width="1920"
+          height="1200"
+          aria-hidden="true"
+        />
+      </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <main>
+      <div class="text-data">
+        <h1>As Featured In</h1>
+        <div class="bar"></div>
+      </div>
+      <div
+        class="slider"
+        style="--width: 100px; --height: 50px; --quantity: 10"
+      >
+        <div class="list">
+          <div class="item" style="--position: 1">
+            <img src="/assets/img/slider1_1.png" alt="" />
+          </div>
+          <div class="item" style="--position: 2">
+            <img src="/assets/img/slider1_2.png" alt="" />
+          </div>
+          <div class="item" style="--position: 3">
+            <img src="/assets/img/slider1_3.png" alt="" />
+          </div>
+          <div class="item" style="--position: 4">
+            <img src="/assets/img/slider1_4.png" alt="" />
+          </div>
+          <div class="item" style="--position: 5">
+            <img src="/assets/img/slider1_5.png" alt="" />
+          </div>
+          <div class="item" style="--position: 6">
+            <img src="/assets/img/slider1_6.png" alt="" />
+          </div>
+          <div class="item" style="--position: 7">
+            <img src="/assets/img/slider1_7.png" alt="" />
+          </div>
+          <div class="item" style="--position: 8">
+            <img src="/assets/img/slider1_8.png" alt="" />
+          </div>
+          <div class="item" style="--position: 9">
+            <img src="/assets/img/slider1_9.png" alt="" />
+          </div>
+          <div class="item" style="--position: 10">
+            <img src="/assets/img/slider1_10.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++ -->
 
     <section id="services-1628">
       <div class="cs-container">
@@ -216,16 +261,18 @@
           <div class="cs-flex">
             <span class="cs-topper">Our Services</span>
             <h2 class="cs-title">
-              Grow Your Business with Our New Bold Agency
+              Transforming Connectivity to Meet Your Needs
             </h2>
           </div>
           <p class="cs-text">
-            Aqestic recusandae laudantium optio amet a quisquam saepe aliquid,
-            voluptate praesentium dicta fuga dolor error perspiciatis voluptatem
-            eum cupiditate totam reiciendis quam minus inventore sint rem
-            impedit esse quasi Tenetur sed reprehenderit earum a magni aliquid
-            blanditiis dolores, veritatis soluta autem beatae officia expedita
-            ipsum rerum doloribus sit provident delectus.
+            Our mission is to redefine what you expect from your internet
+            connection. With advanced technology and tailored plans, we ensure
+            that each user—whether at home, at work, or on the go—gets the
+            speed, security, and reliability they need. Our services adapt to
+            your lifestyle, supporting everything from high-definition streaming
+            and online gaming to remote work and smart home solutions.
+            Experience internet that’s built around you, bringing faster, more
+            secure, and seamless connectivity right to your fingertips
           </p>
         </div>
         <ul class="cs-card-group">
@@ -235,30 +282,26 @@
                 <!--Mobile Image-->
                 <source
                   media="(max-width: 600px)"
-                  srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg
-                  "
+                  src="/assets/img/homeusers.jpg"
                 />
                 <!--Tablet and above Image-->
                 <source
                   media="(min-width: 601px)"
-                  srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg
-                  "
+                  src="/assets/img/homeusers.jpg"
                 />
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg"
+                  src="/assets/img/homeusers.jpg"
                   alt="room"
                   width="413"
                   height="420"
                 />
               </picture>
-              <h3 class="cs-h3">Process Safety & Risk Management</h3>
+              <h3 class="cs-h3">Home Users</h3>
               <p class="cs-item-text">
-                We provide some of the finest quality, most reliable, and cost
-                effective services and solutions.
+                Enjoy high-speed internet for streaming, gaming, and smart home
+                devices with secure, stable connections.
               </p>
               <span class="cs-fake-link">
                 Get Started
@@ -281,30 +324,26 @@
                 <!--Mobile Image-->
                 <source
                   media="(max-width: 600px)"
-                  srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg
-                  "
+                  src="/assets/img/small business.jpg"
                 />
                 <!--Tablet and above Image-->
                 <source
                   media="(min-width: 601px)"
-                  srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg
-                  "
+                  src="/assets/img/small business.jpg"
                 />
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg"
+                  src="/assets/img/small business.jpg"
                   alt="room"
                   width="413"
                   height="420"
                 />
               </picture>
-              <h3 class="cs-h3">Occupational Safety & Health</h3>
+              <h3 class="cs-h3">Small Businesses</h3>
               <p class="cs-item-text">
-                We provide some of the finest quality, most reliable, and cost
-                effective services and solutions.
+                Ensure seamless connectivity for teams and customers with
+                reliable internet for productivity and customer satisfaction.
               </p>
               <span class="cs-fake-link">
                 Get Started
@@ -327,30 +366,26 @@
                 <!--Mobile Image-->
                 <source
                   media="(max-width: 600px)"
-                  srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg
-                  "
+                  src="/assets/img/gamersuser.jpg"
                 />
                 <!--Tablet and above Image-->
                 <source
                   media="(min-width: 601px)"
-                  srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg
-                  "
+                  src="/assets/img/gamersuser.jpg"
                 />
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg"
+                  src="/assets/img/gamersuser.jpg"
                   alt="room"
                   width="413"
                   height="420"
                 />
               </picture>
-              <h3 class="cs-h3">Security Assessment and Planning</h3>
+              <h3 class="cs-h3">Gamers</h3>
               <p class="cs-item-text">
-                We provide some of the finest quality, most reliable, and cost
-                effective services and solutions.
+                Experience low-latency, high-speed connections for competitive
+                gaming and smooth live streaming.
               </p>
               <span class="cs-fake-link">
                 Get Started
@@ -373,30 +408,26 @@
                 <!--Mobile Image-->
                 <source
                   media="(max-width: 600px)"
-                  srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg
-                  "
+                  src="/assets/img/remote workers.jpg"
                 />
                 <!--Tablet and above Image-->
                 <source
                   media="(min-width: 601px)"
-                  srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg
-                  "
+                  src="/assets/img/remote workers.jpg"
                 />
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg"
+                  src="/assets/img/remote workers.jpg"
                   alt="room"
                   width="413"
                   height="420"
                 />
               </picture>
-              <h3 class="cs-h3">Security Assessment and Planning</h3>
+              <h3 class="cs-h3">Remote Workers</h3>
               <p class="cs-item-text">
-                We provide some of the finest quality, most reliable, and cost
-                effective services and solutions.
+                Depend on a stable, fast internet connection to support video
+                calls, file sharing, and remote access with minimal downtime.
               </p>
               <span class="cs-fake-link">
                 Get Started
@@ -414,6 +445,431 @@
             </a>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Services                   -->
+    <!-- ============================================ -->
+
+    <!--  -->
+    <section id="reviews-355">
+      <div class="cs-container">
+        <div class="cs-content">
+          <div class="text-data">
+            <h1>Customer Reviews</h1>
+            <div class="bar"></div>
+          </div>
+          <h2 class="cs-title">Trusted by Thousand of People & Companies</h2>
+          <p class="cs-text">
+            At Stitch Cleaning Service, let us help you solve problems so that
+            you can focus on your mission. We support businesses through periods
+            of expansion, succession.
+          </p>
+        </div>
+        <ul class="cs-card-group">
+          <li class="cs-item">
+            <img
+              class="cs-quote"
+              aria-hidden="true"
+              src="/assets/img/icons8-google.svg"
+              decoding="async"
+              alt="quote icon"
+              width="40"
+              height="33"
+            />
+            <p class="cs-review">
+              From the moment we switched to this provider, our video calls and
+              streaming sessions became smoother than ever. Whether working from
+              home or just enjoying a movie night, it’s been a game changer for
+              our family’s internet needs..
+            </p>
+            <span class="cs-name">— Alexandra M.</span>
+            <span class="cs-job">Business Owner</span>
+          </li>
+          <li class="cs-item">
+            <img
+              class="cs-quote"
+              aria-hidden="true"
+              src="/assets/img/icons8-google.svg"
+              decoding="async"
+              alt="quote icon"
+              width="40"
+              height="33"
+            />
+            <p class="cs-review">
+              Choosing this service was the best decision we made for our
+              business. The connection speed is unmatched, and their customer
+              support is always responsive and helpful. Our productivity has
+              improved significantly, and we couldn't be happier!.
+            </p>
+            <span class="cs-name">— Jason K</span>
+            <span class="cs-job"> Professional Gamer</span>
+          </li>
+          <li class="cs-item">
+            <img
+              class="cs-quote"
+              aria-hidden="true"
+              src="/assets/img/icons8-google.svg"
+              decoding="async"
+              alt="quote icon"
+              width="40"
+              height="33"
+            />
+            <p class="cs-review">
+              As a gamer, fast and reliable internet is non-negotiable. Thanks
+              to their exceptional service, my gameplay is seamless, with zero
+              lag and crystal-clear graphics. It has genuinely leveled up my
+              gaming experience.
+            </p>
+            <span class="cs-name">— Samantha R</span>
+            <span class="cs-job">Remote Worker & Mother</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- ----------------------------------------- -->
+    <section id="services-1188">
+      <div class="cs-container">
+        <div class="cs-content">
+          <span class="cs-topper">Other services</span>
+          <h2 class="cs-title">Largest Wireless Internet Provider Featuring</h2>
+          <p class="cs-text">
+            As the largest wireless internet provider, we offer fast, reliable
+            coverage nationwide. Enjoy seamless connectivity for all your needs,
+            anywhere you go. Trust us for high-speed, secure internet, wherever
+            you are.
+          </p>
+        </div>
+        <ul class="cs-card-group">
+          <li class="cs-item">
+            <picture class="cs-picture">
+              <img
+                class="cs-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/engineering%201%20red.svg"
+                loading="lazy"
+                decoding="async"
+                alt="icon"
+                width="33"
+                height="38"
+                aria-hidden="true"
+              />
+            </picture>
+            <!-- Text Grouped For Flexbox-->
+            <div class="cs-text-group">
+              <h3 class="cs-h3">No Installation Required</h3>
+              <p class="cs-item-text">
+                Enjoy fast, reliable internet with no installation required
+              </p>
+            </div>
+          </li>
+          <li class="cs-item">
+            <picture class="cs-picture">
+              <img
+                class="cs-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brake-red.svg"
+                loading="lazy"
+                decoding="async"
+                alt="icon"
+                width="33"
+                height="38"
+                aria-hidden="true"
+              />
+            </picture>
+            <!-- Text Grouped For Flexbox-->
+            <div class="cs-text-group">
+              <h3 class="cs-h3">Unlimited Data</h3>
+              <p class="cs-item-text">
+                No limits, just endless data for uninterrupted connectivity
+              </p>
+            </div>
+          </li>
+          <li class="cs-item">
+            <picture class="cs-picture">
+              <img
+                class="cs-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/air-conditioner-red.svg"
+                loading="lazy"
+                decoding="async"
+                alt="icon"
+                width="33"
+                height="38"
+                aria-hidden="true"
+              />
+            </picture>
+            <!-- Text Grouped For Flexbox-->
+            <div class="cs-text-group">
+              <h3 class="cs-h3">Speeds Up To 200Mbp</h3>
+              <p class="cs-item-text">
+                Enjoy smooth browsing and streaming with speeds up to 200Mbps
+              </p>
+            </div>
+          </li>
+          <li class="cs-item">
+            <picture class="cs-picture">
+              <img
+                class="cs-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/motor%201%20red.svg"
+                loading="lazy"
+                decoding="async"
+                alt="icon"
+                width="33"
+                height="38"
+                aria-hidden="true"
+              />
+            </picture>
+            <!-- Text Grouped For Flexbox-->
+            <div class="cs-text-group">
+              <h3 class="cs-h3">Nationwide Coverage</h3>
+              <p class="cs-item-text">
+                Stay connected coast to coast with nationwide coverage
+              </p>
+            </div>
+          </li>
+          <li class="cs-item">
+            <picture class="cs-picture">
+              <img
+                class="cs-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/alloy-wheel-red.svg"
+                loading="lazy"
+                decoding="async"
+                alt="icon"
+                width="33"
+                height="38"
+                aria-hidden="true"
+              />
+            </picture>
+            <!-- Text Grouped For Flexbox-->
+            <div class="cs-text-group">
+              <h3 class="cs-h3">No Contracts/ Cancel Anytime</h3>
+              <p class="cs-item-text">
+                Enjoy the freedom of no contracts and the ability to cancel
+                anytime.
+              </p>
+            </div>
+          </li>
+          <li class="cs-item">
+            <picture class="cs-picture">
+              <img
+                class="cs-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/contamination-red.svg"
+                loading="lazy"
+                decoding="async"
+                alt="icon"
+                width="33"
+                height="38"
+                aria-hidden="true"
+              />
+            </picture>
+            <!-- Text Grouped For Flexbox-->
+            <div class="cs-text-group">
+              <h3 class="cs-h3">Pause & Restart Anytime</h3>
+              <p class="cs-item-text">
+                Flexibility to pause and restart your plan whenever you need
+              </p>
+            </div>
+          </li>
+        </ul>
+        <a href="" class="cs-button-solid">Check Pricing</a>
+      </div>
+    </section>
+    <!-- ------------------------------------ -->
+
+    <section id="pricing-1387">
+      <div class="cs-container">
+        <div class="cs-content">
+          <div class="text-data">
+            <h1>Our Pricing</h1>
+            <div class="bar"></div>
+          </div>
+
+          <h2 class="cs-title">
+            Flexible Pricing Plans for Your Tailored Needs
+          </h2>
+          <p class="cs-text">
+            In the new era of technology we look in the future with certainty
+            and for any post types, or just they are so much great of all to a
+            program.
+          </p>
+        </div>
+        <ul class="cs-card-group cs-option1">
+          <li class="cs-item cs-popular">
+            <div class="cs-flex">
+              <span class="cs-package">Standard Plan</span>
+              <span class="cs-price">
+                $99
+                <span class="cs-duration">/Month</span>
+              </span>
+              <div class="cs-tag">
+                <img
+                  class="cs-icon"
+                  aria-hidden="true"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg"
+                  decoding="async"
+                  alt="fire"
+                  width="16"
+                  height="16"
+                  loading="true"
+                />
+                Hot Deal
+              </div>
+            </div>
+            <div class="cs-info">
+              <ul class="cs-ul">
+                <li class="cs-li">High-Speed Download up to 100Mbps</li>
+                <li class="cs-li">1080p HD video streaming</li>
+                <li class="cs-li">Good gaming latency</li>
+                <li class="cs-li">No Contract, No Credit Check</li>
+                <li class="cs-li">Unlimited & Unthrottled</li>
+              </ul>
+              <a href="" class="cs-button-transparent">Get Now</a>
+            </div>
+          </li>
+          <li class="cs-item">
+            <div class="cs-flex">
+              <span class="cs-package">Turbo Plan</span>
+              <span class="cs-price">
+                $299
+                <span class="cs-duration">/Month</span>
+              </span>
+              <div class="cs-tag">
+                <img
+                  class="cs-icon"
+                  aria-hidden="true"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg"
+                  decoding="async"
+                  alt="fire"
+                  width="16"
+                  height="16"
+                  loading="true"
+                />
+                Hot Deal
+              </div>
+            </div>
+            <div class="cs-info">
+              <ul class="cs-ul">
+                <li class="cs-li">High-Speed Download up to <b>200Mbps</b></li>
+                <li class="cs-li"><b>4K</b> video streaming</li>
+                <li class="cs-li">Good gaming latency</li>
+                <li class="cs-li">No Contract, No Credit Check</li>
+                <li class="cs-li">Unlimited & Unthrottled</li>
+              </ul>
+              <a href="" class="cs-button-transparent">Read More</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- ---------------------- -->
+    <section id="faq-350">
+      <div class="cs-container">
+        <div class="cs-left">
+          <!--Big Image-->
+          <picture class="cs-picture cs-picture1" aria-hidden="true">
+            <source
+              media="(max-width: 600px)"
+              src="/assets/img/IQMC412_Front+(1).jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/assets/img/IQMC412_Front+(1).jpg"
+              alt="cleaning supplies"
+              width="672"
+              height="672"
+            />
+          </picture>
+          <!--Medium Image-->
+          <picture class="cs-picture cs-picture2" aria-hidden="true">
+            <source media="(max-width: 600px)" />
+            <source media="(min-width: 601px)" />
+            <img loading="lazy" decoding="async" width="300" height="300" />
+          </picture>
+          <!--Small Image-->
+          <picture class="cs-picture cs-picture3" aria-hidden="true">
+            <source media="(max-width: 600px)" />
+            <source media="(min-width: 601px)" />
+            <img
+              loading="lazy"
+              decoding="async"
+              alt="cleaner"
+              width="200"
+              height="200"
+            />
+          </picture>
+        </div>
+        <div class="cs-content">
+          <div class="text-data">
+            <h1>FAQ</h1>
+            <div class="bar"></div>
+          </div>
+
+          <ul class="cs-faq-group">
+            <!-- Active class added as default -->
+            <li class="cs-faq-item active">
+              <button class="cs-button">
+                <span class="cs-button-text">
+                  What internet speeds do you offer, and what plans are
+                  available?
+                </span>
+              </button>
+              <p class="cs-item-p">
+                We provide a variety of internet plans with speeds to meet
+                different needs, ranging from basic browsing packages to
+                ultra-fast plans for gaming and business use.
+              </p>
+            </li>
+            <li class="cs-faq-item">
+              <button class="cs-button">
+                <span class="cs-button-text">
+                  How can I sign up for an esports tournament or event?
+                </span>
+              </button>
+              <p class="cs-item-p">
+                you can register for esports tournaments directly on our
+                website. Visit the esports section, select your event, and
+                follow the simple registration steps.
+              </p>
+            </li>
+            <li class="cs-faq-item">
+              <button class="cs-button">
+                <span class="cs-button-text">
+                  What travel services do you offer?
+                </span>
+              </button>
+              <p class="cs-item-p">
+                We offer comprehensive travel packages, including flights,
+                accommodations, and custom itineraries for both leisure and
+                corporate travel. Check our travel section for current offers.
+              </p>
+            </li>
+            <li class="cs-faq-item">
+              <button class="cs-button">
+                <span class="cs-button-text">
+                  Can I bundle internet services with other corporate solutions?
+                </span>
+              </button>
+              <p class="cs-item-p">
+                Yes, we offer tailored corporate plans that bundle high-speed
+                internet with additional services like VoIP, networking
+                solutions, and IT support to enhance business efficiency.
+              </p>
+            </li>
+            <li class="cs-faq-item">
+              <button class="cs-button">
+                <span class="cs-button-text">
+                  How do I get support if I have issues with my internet
+                  service?
+                </span>
+              </button>
+              <p class="cs-item-p">
+                Our support team is available 24/7. You can contact us via our
+                support page, live chat, or call our helpline for immediate
+                assistance.
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 

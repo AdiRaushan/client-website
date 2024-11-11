@@ -9,9 +9,9 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <!--=============== CSS ===============-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="stylesheet" href="/assets/css/styles.css" />
 
     <title>Responsive</title>
@@ -20,148 +20,13 @@
     <!-- ============================================ -->
     <!--                 Navigation                   -->
     <!-- ============================================ -->
-
-    <header id="cs-navigation">
-      <div class="cs-container">
-        <!--Nav Logo-->
-        <!--Logo is turned white in the css with a filter on dark mode-->
-        <a href="" class="cs-logo" aria-label="back to home">
-          <img
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care.svg"
-            alt="logo"
-            width="210"
-            height="29"
-            aria-hidden="true"
-            decoding="async"
-          />
-        </a>
-        <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
-          <!--Mobile Nav Toggle-->
-          <button class="cs-toggle" aria-label="mobile menu toggle">
-            <div class="cs-box" aria-hidden="true">
-              <span class="cs-line cs-line1" aria-hidden="true"></span>
-              <span class="cs-line cs-line2" aria-hidden="true"></span>
-              <span class="cs-line cs-line3" aria-hidden="true"></span>
-            </div>
-          </button>
-          <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-          <div class="cs-ul-wrapper">
-            <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-              <li class="cs-li">
-                <a href="/assets/pages/index.html" class="cs-li-link cs-active">
-                  Home
-                </a>
-              </li>
-              <li class="cs-li">
-                <a href="/assets/pages/about.html" class="cs-li-link">
-                  About
-                </a>
-              </li>
-              <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
-              <li class="cs-li cs-dropdown" tabindex="0">
-                <span class="cs-li-link">
-                  Products
-                  <img
-                    class="cs-drop-icon"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
-                    alt="dropdown icon"
-                    width="15"
-                    height="15"
-                    decoding="async"
-                    aria-hidden="true"
-                  />
-                </span>
-                <ul class="cs-drop-ul">
-                  <li class="cs-drop-li">
-                    <a
-                      href="/assets/pages/product1.html"
-                      class="cs-li-link cs-drop-link"
-                      >Product 1</a
-                    >
-                  </li>
-                  <li class="cs-drop-li">
-                    <a href="" class="cs-li-link cs-drop-link">product 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="cs-li">
-                <a href="" class="cs-li-link"> About Us </a>
-              </li>
-              <li class="cs-li">
-                <a href="" class="cs-li-link"> Contact </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class="cs-contact-group">
-          <a href="tel:+84 1985 33 999" class="cs-phone">
-            <img
-              class="cs-phone-icon"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg"
-              alt="logo"
-              width="24"
-              height="24"
-              aria-hidden="true"
-              decoding="async"
-            />
-            +84 1985 33 999
-          </a>
-          <div class="cs-social">
-            <a href="" class="cs-social-link">
-              <img
-                class="cs-social-icon"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg"
-                alt="logo"
-                width="12"
-                height="12"
-                aria-hidden="true"
-                decoding="async"
-              />
-            </a>
-            <a href="" class="cs-social-link">
-              <img
-                class="cs-social-icon"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg"
-                alt="logo"
-                width="12"
-                height="12"
-                aria-hidden="true"
-                decoding="async"
-              />
-            </a>
-            <a href="" class="cs-social-link">
-              <img
-                class="cs-social-icon"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg"
-                alt="logo"
-                width="12"
-                height="12"
-                aria-hidden="true"
-                decoding="async"
-              />
-            </a>
-            <a href="" class="cs-social-link">
-              <img
-                class="cs-social-icon"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg"
-                alt="logo"
-                width="12"
-                height="12"
-                aria-hidden="true"
-                decoding="async"
-              />
-            </a>
-          </div>
-        </div>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
-                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-                <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
-            </button> -->
-      </div>
-    </header>
-
+    <div id="navbar"></div>
+    <!--=============== HEADER ===============-->
+    <script>
+      document.getElementById("navbar").innerHTML = fetch("./navbar.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("navbar").innerHTML = data));
+    </script>
     <!--end of Navigation bar-->
     <!--------------------------------------- hero Section  ------------------------------------->
     <!-- ============================================ -->
@@ -340,7 +205,7 @@
       <div class="cs-container">
         <div class="cs-content">
           <span class="cs-topper">The Future Is Here</span>
-          <h2 class="cs-title">Bringing Your Ideas and Innovations to Life</h2>
+          <h2 class="cs-title">Next-Level Connectivity with IQMC-520</h2>
           <p class="cs-text">
             Discover the cutting-edge technologies and services we offer to
             enhance your internet experience.
@@ -384,7 +249,7 @@
                 width="40"
                 height="40"
               />
-              14-Day Money Back Guarantee
+              5G and 4G Multi-Carrier Support
             </li>
             <li class="cs-li">
               <img
@@ -397,21 +262,9 @@
                 width="40"
                 height="40"
               />
-              Coverage
+              Unlimited Data
             </li>
-            <li class="cs-li">
-              <img
-                class="cs-icon"
-                aria-hidden="true"
-                src="/assets/img/cancel-close-delete-exit-minus-remove-svgrepo-com.svg"
-                loading="lazy"
-                decoding="async"
-                alt="icon"
-                width="40"
-                height="40"
-              />
-              No Contracts/ Cancel Anytime
-            </li>
+
             <li class="cs-li">
               <img
                 class="cs-icon"
@@ -423,7 +276,7 @@
                 width="40"
                 height="40"
               />
-              Pause & Restart Anytime
+              Advanced Security Features:
             </li>
           </ul>
           <a href="" class="cs-button-solid">More About Us</a>
@@ -442,13 +295,13 @@
           </ul>
           <!--Picture-->
           <picture class="cs-picture">
-            <source media="(max-width: 600px)" src="/assets/img/name.jpg" />
-            <source media="(min-width: 601px)" src="/assets/img/name.jpg" />
+            <source media="(max-width: 600px)" src="/assets/img/OIP.jpeg" />
+            <source media="(min-width: 601px)" src="/assets/img/OIP.jpeg" />
             <img
               aria-hidden="true"
               loading="lazy"
               decoding="async"
-              src="/assets/img/name.jpg"
+              src="/assets/img/OIP.jpeg"
               alt="lightbulbs"
               width="630"
               height="461"
@@ -481,7 +334,7 @@
             <img
               class="cs-quote"
               aria-hidden="true"
-              src="/assets/img/quotes-svgrepo-com.svg"
+              src="/assets/img/icons8-google.svg"
               decoding="async"
               alt="quote icon"
               width="40"
@@ -500,7 +353,7 @@
             <img
               class="cs-quote"
               aria-hidden="true"
-              src="/assets/img/quotes-svgrepo-com.svg"
+              src="/assets/img/icons8-google.svg"
               decoding="async"
               alt="quote icon"
               width="40"
@@ -519,7 +372,7 @@
             <img
               class="cs-quote"
               aria-hidden="true"
-              src="/assets/img/quotes-svgrepo-com.svg"
+              src="/assets/img/icons8-google.svg"
               decoding="async"
               alt="quote icon"
               width="40"
@@ -540,6 +393,66 @@
 
     <!-- ============================================ -->
     <!--                  Pricing                     -->
+
+    <!-- ============================================ -->
+    <!--                 Promotions                   -->
+    <!-- ============================================ -->
+
+    <section id="promotions-1567">
+      <div class="cs-container">
+        <ul class="cs-card-group">
+          <li class="cs-item">
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source
+                media="(max-width: 600px)"
+                src="/assets/img/pexels-shvetsa-12662814.jpg"
+              />
+              <!--Tablet and above Image-->
+              <source
+                media="(min-width: 601px)"
+                src="/assets/img/pexels-shvetsa-12662814.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/assets/img/pexels-shvetsa-12662814.jpg"
+                alt="room"
+                width="630"
+                height="354"
+              />
+            </picture>
+            <div class="cs-content">
+              <span class="cs-tag">Fast Internet Plans</span>
+              <h2 class="cs-h2">For Home And Outside</h2>
+              <a href="" class="cs-button-solid">See Now</a>
+            </div>
+          </li>
+          <li class="cs-item">
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" src="/assets/img/12.png" />
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" src="/assets/img/12.png" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/assets/img/12.png"
+                alt="room"
+                width="630"
+                height="354"
+              />
+            </picture>
+            <div class="cs-content">
+              <span class="cs-tag">Best Range Hardware</span>
+              <h2 class="cs-h2">Buy With One Call</h2>
+              <a href="" class="cs-button-solid">Shop Now</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ============================================ -->
 
     <section id="pricing-1387">
@@ -771,6 +684,10 @@
     <!--                   Footer                     -->
     <!-- ============================================ -->
 
+    <!-- ============================================ -->
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
     <footer id="cs-footer-1292">
       <div class="cs-container">
         <!-- Logo Group -->
@@ -781,17 +698,14 @@
               aria-hidden="true"
               loading="lazy"
               decoding="async"
-              src=""
+              src="/assets/img/logonew3.png"
               alt="logo"
               width="240"
               height="32"
             />
           </a>
-          <p class="cs-text">
-            Our support team is available 24/7. You can contact us via our
-            support page
-          </p>
-          <a href="xyzinfo@mail.com" class="cs-link">
+          <p class="cs-text">Learn more about our mission, values, and team.</p>
+          <a href="mailto:info@mail.com" class="cs-link">
             <img
               class="cs-link-icon"
               aria-hidden="true"
@@ -802,7 +716,7 @@
               width="24"
               height="24"
             />
-            xyz.com
+            hi@stitchconstruction.com
           </a>
         </div>
         <!-- Links -->
@@ -817,27 +731,30 @@
             <a class="cs-nav-link" href="">Enterprise</a>
           </li>
           <li class="cs-nav-li">
-            <a class="cs-nav-link" href="">Wifi</a>
+            <a class="cs-nav-link" href="">WiFi</a>
           </li>
           <li class="cs-nav-li">
-            <a class="cs-nav-link" href="">Transportation</a>
+            <a class="cs-nav-link" href="">Availability</a>
           </li>
         </ul>
         <ul class="cs-nav">
           <li class="cs-nav-li">
-            <span class="cs-header">Modems</span>
+            <span class="cs-header">Products</span>
           </li>
           <li class="cs-nav-li">
-            <a class="cs-nav-link" href="">Brand Modems</a>
+            <a class="cs-nav-link" href="/assets/pages/product1.html"
+              >IQMC-412
+            </a>
           </li>
           <li class="cs-nav-li">
-            <a class="cs-nav-link" href="">Brand Air</a>
+            <a class="cs-nav-link" href="/assets/pages/product2.html"
+              >IQMC-520
+            </a>
           </li>
           <li class="cs-nav-li">
-            <a class="cs-nav-link" href="">Brand Raptor</a>
-          </li>
-          <li class="cs-nav-li">
-            <a class="cs-nav-link" href="">Brand Omega</a>
+            <a class="cs-nav-link" href="/assets/pages/product3.html"
+              >IQMC-520XDR
+            </a>
           </li>
         </ul>
         <ul class="cs-nav">
@@ -859,17 +776,17 @@
             <span class="cs-header">Help</span>
           </li>
           <li class="cs-nav-li">
-            <a class="cs-nav-link" href="">FAQ</a>
+            <a class="cs-nav-link" href="">Customer Support</a>
           </li>
           <li class="cs-nav-li">
-            <a class="cs-nav-link" href="">Contact us</a>
+            <a class="cs-nav-link" href="./support.html">Contact us</a>
           </li>
         </ul>
       </div>
       <div class="cs-bottom">
         <span class="cs-copyright"
           >Copyright© 2023.
-          <a class="cs-copyright-link" href="">Router Website.</a>
+          <a class="cs-copyright-link" href="">OrderTvINternet</a>
           All Right Reserved.
         </span>
         <a href="" class="cs-copyright-link">Terms of Service</a>
@@ -878,44 +795,6 @@
       <!--Floating Cirlces-->
       <div class="cs-floater" aria-hidden="true"></div>
     </footer>
-
-    <script>
-      const imgBox = document.querySelector(".card-img");
-      const slides = imgBox.getElementsByTagName("img");
-      const textContent = document.querySelector(".text-content");
-      const textData = textContent.getElementsByTagName("div");
-
-      let currentIndex = 0; // Track the current slide index
-
-      // Function to show the slide based on the index
-      function showSlide(index) {
-        // Hide all slides and text data
-        for (let slide of slides) {
-          slide.classList.remove("active");
-        }
-        for (let text of textData) {
-          text.classList.remove("active");
-        }
-        // Show the current slide and its corresponding text
-        slides[index].classList.add("active");
-        textData[index].classList.add("active");
-      }
-
-      // Function to go to the next slide
-      function next() {
-        currentIndex = (currentIndex + 1) % slides.length; // Increment index and wrap around
-        showSlide(currentIndex); // Show the slide
-      }
-
-      // Function to go to the previous slide
-      function previuos() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Decrement index and wrap around
-        showSlide(currentIndex); // Show the slide
-      }
-
-      // Initialize the first slide
-      showSlide(currentIndex);
-    </script>
 
     <!--=============== MAIN JS ===============-->
     <script src="/assets/js/main.js"></script>
