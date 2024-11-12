@@ -853,7 +853,7 @@ h1 {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #cs-footer-1292 {
-    padding: var(--sectionPadding);
+    padding: 2rem 3rem;
     padding-bottom: 1.25rem;
     box-sizing: border-box;
     overflow: hidden;
@@ -3132,7 +3132,7 @@ main .text-data h1 {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #services-1628 {
-    padding: var(--sectionPadding);
+    padding: 2rem 3rem;
     background-color: #f7f7f7;
   }
   #services-1628 .cs-container {
@@ -3315,7 +3315,7 @@ main .text-data h1 {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #services-1188 {
-    padding: var(--sectionPadding);
+    padding: 2rem 3rem;
   }
   #services-1188 .cs-container {
     max-width: 80rem;
@@ -3460,7 +3460,7 @@ main .text-data h1 {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #gallery-1716 {
-    padding: var(--sectionPadding);
+    padding: 2rem 2rem;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -3608,7 +3608,7 @@ main .text-data h1 {
 @media only screen and (min-width: 0rem) {
   #steps-284 {
     background-color: #f7f8f8;
-    padding-bottom: 2rem;
+    padding: 2rem 3rem;
   }
   #steps-284 .cs-container {
     width: 100%;
@@ -4701,7 +4701,7 @@ main .text-data h1 {
     max-width: 39.375rem;
     margin-right: auto;
     /* moved section padding to the .cs-content so we can have the cs-picture be full width on mobile without the padding preventing it from doing so */
-    padding: var(--sectionPadding);
+    padding: 2rem 3rem;
     padding-top: 0;
     /* prevents padding from affecting width and height */
     box-sizing: border-box;
@@ -4886,7 +4886,7 @@ main .text-data h1 {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #services-296 {
-    padding: 2rem;
+    padding: 2rem 3rem;
   }
   #services-296 .cs-container {
     width: 100%;
