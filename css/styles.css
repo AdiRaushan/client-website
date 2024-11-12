@@ -3460,7 +3460,7 @@ main .text-data h1 {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #gallery-1716 {
-    padding: 2rem 2rem;
+    padding: 5rem 2rem;
     position: relative;
     z-index: 1;
     overflow: hidden;
