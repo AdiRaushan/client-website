@@ -3132,7 +3132,7 @@ main .text-data h1 {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #services-1628 {
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
     background-color: #f7f7f7;
   }
   #services-1628 .cs-container {
