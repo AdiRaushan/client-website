@@ -405,8 +405,8 @@
     </section>
 
     <!-- comparing section  -->
-
     <div class="comparison-chart my-12">
+      <!-- Text Section for Heading -->
       <div class="text-data text-center mb-8">
         <h2 class="text-3xl font-extrabold text-gray-800">As Featured In</h2>
         <div class="w-1/2 mx-auto bg-blue-500 h-1 mt-4 mb-8 rounded"></div>
@@ -415,69 +415,89 @@
           choice for you!
         </p>
       </div>
-      <table
-        class="comparison-table w-11/12 md:w-3/4 lg:w-2/3 mx-auto border-separate border-spacing-0 shadow-md sm:px-4"
-      >
-        <thead class="bg-blue-500 text-white text-lg">
-          <tr>
-            <th class="px-6 py-4 text-center">Features</th>
-            <th class="px-6 py-4 text-center">Your Company</th>
-            <th class="px-6 py-4 text-center">Competitor 1</th>
-            <th class="px-6 py-4 text-center">Competitor 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="px-6 py-4 text-center">Pricing</td>
-            <td class="px-6 py-4 text-center bg-blue-200 font-bold">
-              $19.99/month
-            </td>
-            <td class="px-6 py-4 text-center">$29.99/month</td>
-            <td class="px-6 py-4 text-center">$25.99/month</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 text-center">Unlimited Data</td>
-            <td class="px-6 py-4 text-center bg-blue-200 font-bold">✔️ Yes</td>
-            <td class="px-6 py-4 text-center">❌ Limited</td>
-            <td class="px-6 py-4 text-center">❌ Limited</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 text-center">No Contracts</td>
-            <td class="px-6 py-4 text-center bg-blue-200 font-bold">✔️ Yes</td>
-            <td class="px-6 py-4 text-center">❌ 1-Year Contract</td>
-            <td class="px-6 py-4 text-center">❌ 2-Year Contract</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 text-center">No Credit Check</td>
-            <td class="px-6 py-4 text-center bg-blue-200 font-bold">✔️ Yes</td>
-            <td class="px-6 py-4 text-center">❌ Credit Check</td>
-            <td class="px-6 py-4 text-center">❌ Credit Check</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 text-center">Customer Support</td>
-            <td class="px-6 py-4 text-center bg-blue-200 font-bold">
-              24/7 Support
-            </td>
-            <td class="px-6 py-4 text-center">Business Hours</td>
-            <td class="px-6 py-4 text-center">Business Hours</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 text-center">Setup Fee</td>
-            <td class="px-6 py-4 text-center bg-blue-200 font-bold">No Fee</td>
-            <td class="px-6 py-4 text-center">$50</td>
-            <td class="px-6 py-4 text-center">$25</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 text-center">Speed</td>
-            <td class="px-6 py-4 text-center bg-blue-200 font-bold">
-              Up to 100 Mbps
-            </td>
-            <td class="px-6 py-4 text-center">Up to 50 Mbps</td>
-            <td class="px-6 py-4 text-center">Up to 75 Mbps</td>
-          </tr>
-        </tbody>
-      </table>
+
+      <!-- Table Section with Scroll for Mobile -->
+      <div class="overflow-x-auto">
+        <table
+          class="comparison-table w-11/12 md:w-3/4 lg:w-2/3 mx-auto border-separate border-spacing-0 shadow-md sm:px-4"
+        >
+          <thead class="bg-blue-500 text-white text-lg">
+            <tr>
+              <th class="px-6 py-4 text-center">Features</th>
+              <th class="px-6 py-4 text-center hidden sm:table-cell">
+                Your Company
+              </th>
+              <th class="px-6 py-4 text-center hidden sm:table-cell">
+                Competitor 1
+              </th>
+              <th class="px-6 py-4 text-center hidden sm:table-cell">
+                Competitor 2
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-6 py-4 text-center">Pricing</td>
+              <td class="px-6 py-4 text-center bg-blue-200 font-bold">
+                $19.99/month
+              </td>
+              <td class="px-6 py-4 text-center">$29.99/month</td>
+              <td class="px-6 py-4 text-center">$25.99/month</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-center">Unlimited Data</td>
+              <td class="px-6 py-4 text-center bg-blue-200 font-bold">
+                ✔️ Yes
+              </td>
+              <td class="px-6 py-4 text-center">❌ Limited</td>
+              <td class="px-6 py-4 text-center">❌ Limited</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-center">No Contracts</td>
+              <td class="px-6 py-4 text-center bg-blue-200 font-bold">
+                ✔️ Yes
+              </td>
+              <td class="px-6 py-4 text-center">❌ 1-Year Contract</td>
+              <td class="px-6 py-4 text-center">❌ 2-Year Contract</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-center">No Credit Check</td>
+              <td class="px-6 py-4 text-center bg-blue-200 font-bold">
+                ✔️ Yes
+              </td>
+              <td class="px-6 py-4 text-center">❌ Credit Check</td>
+              <td class="px-6 py-4 text-center">❌ Credit Check</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-center">Customer Support</td>
+              <td class="px-6 py-4 text-center bg-blue-200 font-bold">
+                24/7 Support
+              </td>
+              <td class="px-6 py-4 text-center">Business Hours</td>
+              <td class="px-6 py-4 text-center">Business Hours</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-center">Setup Fee</td>
+              <td class="px-6 py-4 text-center bg-blue-200 font-bold">
+                No Fee
+              </td>
+              <td class="px-6 py-4 text-center">$50</td>
+              <td class="px-6 py-4 text-center">$25</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-center">Speed</td>
+              <td class="px-6 py-4 text-center bg-blue-200 font-bold">
+                Up to 100 Mbps
+              </td>
+              <td class="px-6 py-4 text-center">Up to 50 Mbps</td>
+              <td class="px-6 py-4 text-center">Up to 75 Mbps</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+
+    <!-- mobile specific -->
 
     <!-- comparison section  -->
     <section id="sbs-521">
