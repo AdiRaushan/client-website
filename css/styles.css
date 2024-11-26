@@ -1855,7 +1855,7 @@ main .text-data h1 {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #sbs-521 {
-    padding: 2rem 2rem;
+    padding: 4rem 2rem;
   }
   #sbs-521 .cs-container {
     width: 100%;
