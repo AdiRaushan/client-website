@@ -1,18 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --primary: #4a2dff;
-  --primaryLight: #f8f9fa;
-  --secondary: #fff;
-  --secondaryLight: #f2f2f2;
-  --accent: #4a90e2;
-  --headerColor: #000000;
-  --bodyTextColor: #4f4f4f;
-  --bodyTextColorWhite: #ffffff;
-  --sectionPadding: clamp(10rem, 7.82vw, 6.25rem) 1rem;
+  --primary: #144bc2; /* Deep blue for a professional, techy look */
+  --primaryLight: #72a9d1; /* Lighter blue for soft backgrounds */
+  --secondary: #ffffff; /* Clean white for clarity and contrast */
+  --secondaryLight: #f0f4f8; /* Very light blue-gray for subtle background areas */
+  --accent: #00bfae; /* Teal for a modern and vibrant tech feel */
+  --headerColor: #1a2534; /* Dark slate gray for strong headers and text */
+  --bodyTextColor: #4e5b6a; /* Muted blue-gray for body text */
+  --bodyTextColorWhite: #ffffff; /* White for text on dark backgrounds */
+  --sectionPadding: clamp(8rem, 7vw, 6rem) 1rem;
 }
 
+html,
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -129,13 +132,24 @@ p {
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
+/* Add bounce animation for excitement */
+.hidden {
+  display: none;
+}
+
+#excitingModal .scale-90 {
+  transform: scale(0.9);
+}
+
+#excitingModal .scale-100 {
+  transform: scale(1);
+}
+
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
+
 /* Mobile - 1023px */
-/*-- -------------------------- -->
-<---     Mobile Navigation      -->
-<--- -------------------------- -*/
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
@@ -802,10 +816,6 @@ p {
 }
 
 /*-- -------------------------- -->
-<---     Mobile Navigation      -->
-<--- -------------------------- -*/
-
-/*-- -------------------------- -->
 <---          Footer            -->
 <--- -------------------------- -*/
 
@@ -1051,6 +1061,58 @@ p {
 /*-- -------------------------- -->
 <---            Hero            -->
 <--- -------------------------- -*/
+
+.hero {
+  padding: 125px 0 var(--section-padding);
+  background: var(--ghost-white-1);
+}
+
+.hero-content {
+  margin-bottom: 80px;
+}
+
+.hero-title {
+  margin-bottom: 25px;
+}
+
+.hero-text {
+  color: var(--cool-gray);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.form-text {
+  color: var(--independence);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.form-text span {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.email-field {
+  background: var(--ghost-white-2);
+  padding: 17px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.email-field:focus {
+  outline-color: var(--majorelle-blue);
+}
+
+.hero .btn-primary {
+  margin-inline: auto;
+}
+
+.hero-banner img {
+  width: 100%;
+}
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -2341,7 +2403,7 @@ main .text-data h1 {
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
-  #pricing-1387 .text-data .bar {
+  #pricing-1387 .cs-content .text-data .bar {
     width: 50%; /* Width of the bar, adjust as needed */
     height: 4px; /* Height of the bar */
     background-color: var(--primary); /* Use your theme color */
@@ -6035,6 +6097,47 @@ a {
   }
 }
 /* ----------------------------------------comparison */
-/* General Styling */
+.contact-options {
+  background-color: var(--secondary);
+  color: var(--bodyTextColor);
+  padding: var(--sectionPadding);
+}
 
-/* Container for the Comparison Chart */
+.contact-options h2 {
+  color: var(--primary);
+}
+
+.contact-options span {
+  color: var(--accent);
+}
+
+.contact-options .btn-primary {
+  background-color: var(--primary);
+  color: var(--bodyTextColorWhite);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-options .btn-primary:hover {
+  background-color: var(--accent);
+}
+
+.contact-options .contact-option {
+  text-align: center;
+}
+
+.contact-options .icon-wrapper {
+  background-color: var(--secondaryLight);
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.contact-options .icon-wrapper img {
+  height: 2rem;
+  width: auto;
+}
