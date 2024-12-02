@@ -1,0 +1,392 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--=============== CSS ===============-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <title>RV HIGH SPEED INTERNET</title>
+  </head>
+  <body>
+    <header id="cs-navigation">
+      <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="cs-logo" aria-label="back to home">
+          <img
+            src="/assets/img/1 logo.png"
+            alt="logo"
+            style="width: 120px; height: auto"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+          <!--Mobile Nav Toggle-->
+          <button class="cs-toggle" aria-label="mobile menu toggle">
+            <div class="cs-box" aria-hidden="true">
+              <span class="cs-line cs-line1" aria-hidden="true"></span>
+              <span class="cs-line cs-line2" aria-hidden="true"></span>
+              <span class="cs-line cs-line3" aria-hidden="true"></span>
+            </div>
+          </button>
+          <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+          <div class="cs-ul-wrapper">
+            <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+              <li class="cs-li">
+                <a href="/index.html" class="cs-li-link cs-active"> Home </a>
+              </li>
+              <li class="cs-li">
+                <a href="/about.html" class="cs-li-link"> About </a>
+              </li>
+              <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+              <li class="cs-li cs-dropdown" tabindex="0">
+                <span class="cs-li-link">
+                  Products
+                  <img
+                    class="cs-drop-icon"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
+                    alt="dropdown icon"
+                    width="15"
+                    height="15"
+                    decoding="async"
+                    aria-hidden="true"
+                  />
+                </span>
+                <ul class="cs-drop-ul">
+                  <li class="cs-drop-li">
+                    <a href="Product/sim.html" class="cs-li-link cs-drop-link"
+                      >Multi-carrier SIM</a
+                    >
+                  </li>
+                  <li class="cs-drop-li">
+                    <a href="product1.html" class="cs-li-link cs-drop-link"
+                      >IQMC-520</a
+                    >
+                  </li>
+                  <li class="cs-drop-li">
+                    <a href="product2.html" class="cs-li-link cs-drop-link"
+                      >IQMC-412</a
+                    >
+                  </li>
+                  <li class="cs-drop-li">
+                    <a href="product3.html" class="cs-li-link cs-drop-link"
+                      >IQMC-520XDR</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="cs-li">
+                <a href="/services.html" class="cs-li-link"> Services</a>
+              </li>
+              <li class="cs-li">
+                <a href="/pricing.html" class="cs-li-link"> Plans</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="cs-contact-group">
+          <a href="tel:+84 1985 33 999" class="cs-phone">
+            <img
+              class="cs-phone-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg"
+              alt="logo"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              decoding="async"
+            />
+            +1234567890
+          </a>
+          <div class="cs-social">
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="max-w-4xl mx-auto pt-40 px-12 bg-white rounded-lg shadow-lg">
+      <!-- Form Header -->
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-blue-900 mb-2">Contact Us</h1>
+        <p class="text-lg text-gray-600">
+          We're here to assist you. Fill out the form below and we’ll get back
+          to you shortly!
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form action="#" method="POST" class="space-y-6">
+        <!-- First Name and Last Name -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label
+              for="firstName"
+              class="block text-sm font-semibold text-gray-700"
+              >First Name</label
+            >
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              class="w-full p-3 mt-1 border rounded-md shadow-sm focus:ring-primary-color focus:border-primary-color"
+              placeholder="John"
+            />
+          </div>
+
+          <div>
+            <label
+              for="lastName"
+              class="block text-sm font-semibold text-gray-700"
+              >Last Name</label
+            >
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+              class="w-full p-3 mt-1 border rounded-md shadow-sm focus:ring-primary-color focus:border-primary-color"
+              placeholder="Doe"
+            />
+          </div>
+        </div>
+
+        <!-- Phone Number -->
+        <div>
+          <label for="phone" class="block text-sm font-semibold text-gray-700"
+            >Phone Number</label
+          >
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            class="w-full p-3 mt-1 border rounded-md shadow-sm focus:ring-primary-color focus:border-primary-color"
+            placeholder="123-456-7890"
+          />
+        </div>
+
+        <!-- Email Address -->
+        <div>
+          <label for="email" class="block text-sm font-semibold text-gray-700"
+            >Email Address</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full p-3 mt-1 border rounded-md shadow-sm focus:ring-primary-color focus:border-primary-color"
+            placeholder="example@email.com"
+          />
+        </div>
+
+        <!-- Product Dropdown -->
+        <div>
+          <label for="product" class="block text-sm font-semibold text-gray-700"
+            >Select Product</label
+          >
+          <select
+            id="product"
+            name="product"
+            required
+            class="w-full p-3 mt-1 border rounded-md shadow-sm focus:ring-primary-color focus:border-primary-color"
+          >
+            <option value="">Select a Product</option>
+            <option value="product1">Product 1</option>
+            <option value="product2">Product 2</option>
+            <option value="product3">Product 3</option>
+            <option value="product4">Product 4</option>
+          </select>
+        </div>
+
+        <!-- Message Textarea -->
+        <div>
+          <label for="message" class="block text-sm font-semibold text-gray-700"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="w-full p-3 mt-1 border rounded-md shadow-sm focus:ring-primary-color focus:border-primary-color"
+            placeholder="Write your message here..."
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button
+            type="submit"
+            class="bg-primary-color text-white py-3 px-8 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-primary-color"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <footer id="cs-footer-1292">
+      <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+          <a aria-label="go back to home" class="cs-logo" href="">
+            <img
+              class="cs-logo-img"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="/assets/img/1 logo.png"
+              alt="logo"
+              width="240"
+              height="32"
+            />
+          </a>
+          <p class="cs-text">Learn more about our mission, values, and team.</p>
+          <a href="mailto:info@mail.com" class="cs-link">
+            <img
+              class="cs-link-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/construction-mail.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+            contact@rvhighspeedinternet.com
+          </a>
+        </div>
+        <!-- Links -->
+        <ul class="cs-nav">
+          <li class="cs-nav-li">
+            <span class="cs-header">Internet</span>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Wireless Internet</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Enterprise</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">WiFi</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Availability</a>
+          </li>
+        </ul>
+        <ul class="cs-nav">
+          <li class="cs-nav-li">
+            <span class="cs-header">Products</span>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="/assets/pages/product1.html"
+              >IQMC-412
+            </a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="/assets/pages/product2.html"
+              >IQMC-520
+            </a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="/assets/pages/product3.html"
+              >IQMC-520XDR
+            </a>
+          </li>
+        </ul>
+        <ul class="cs-nav">
+          <li class="cs-nav-li">
+            <span class="cs-header">Contact</span>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Facebook</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Instagram</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">LinkedIn</a>
+          </li>
+        </ul>
+        <ul class="cs-nav">
+          <li class="cs-nav-li">
+            <span class="cs-header">Help</span>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="customersupport.html"
+              >Customer Support</a
+            >
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="./support.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="cs-bottom">
+        <span class="cs-copyright"
+          >Copyright© 2023.
+          <a class="cs-copyright-link" href="">OrderTvINternet</a>
+          All Right Reserved.
+        </span>
+        <a href="term.html" class="cs-copyright-link">Terms of Service</a>
+      </div>
+      <!--Floating Cirlces-->
+      <div class="cs-floater" aria-hidden="true"></div>
+    </footer>
+  </body>
+</html>

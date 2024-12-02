@@ -93,38 +93,39 @@ setInterval(autoSlide, 3000);
 // Get the modal and button elements
 
 // Get the modal and button elements
-document.addEventListener("DOMContentLoaded", () => {
-  let hasTriggered = false;
+let hasTriggered = false;
+const modal = document.getElementById("excitingModal");
+const modalContent = document.getElementById("modalContent");
 
-  // Display modal at 10% scroll
-  window.addEventListener("scroll", () => {
-    const triggerPoint = 0.1; // 10% scroll
-    const scrollPosition =
-      document.documentElement.scrollTop /
-      (document.documentElement.scrollHeight - window.innerHeight);
+// Scroll Trigger
+window.addEventListener("scroll", () => {
+  const triggerPoint = 0.1; // Trigger after 30% scroll
+  const scrollPosition =
+    document.documentElement.scrollTop / document.documentElement.scrollHeight;
 
-    if (scrollPosition > triggerPoint && !hasTriggered) {
-      const modal = document.getElementById("excitingModal");
-      modal.classList.remove("hidden");
-      modal.querySelector("div").classList.add("scale-100");
-      hasTriggered = true; // Ensure it triggers only once
-    }
-  });
+  if (scrollPosition > triggerPoint && !hasTriggered) {
+    modal.classList.remove("hidden");
+    hasTriggered = true; // Ensure it triggers only once
+  }
+});
 
-  // Close modal on click
-  document
-    .getElementById("closeExcitingModal")
-    .addEventListener("click", () => {
-      const modal = document.getElementById("excitingModal");
-      modal.classList.add("hidden");
-      modal.querySelector("div").classList.remove("scale-100");
-    });
+// Close Modal when clicking outside of it
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
 
-  // Optional: Handle form submission
-  const form = document.getElementById("excitingLeadForm");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    alert("Thank you for subscribing!");
-    document.getElementById("excitingModal").classList.add("hidden");
-  });
+// Close Modal when clicking on the close button
+document.getElementById("closeExcitingModal").addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+// Optional: Close the modal after form submission
+const leadForm = document.getElementById("excitingLeadForm");
+leadForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  // Perform form submission (AJAX, etc.)
+  console.log("Form Submitted!");
+  modal.classList.add("hidden");
 });

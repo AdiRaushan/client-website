@@ -1,0 +1,368 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--=============== CSS ===============-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <title>RV HIGH SPEED INTERNET</title>
+  </head>
+  <body>
+    <header id="cs-navigation">
+      <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="cs-logo" aria-label="back to home">
+          <img
+            src="/assets/img/1 logo.png"
+            alt="logo"
+            style="width: 120px; height: auto"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+          <!--Mobile Nav Toggle-->
+          <button class="cs-toggle" aria-label="mobile menu toggle">
+            <div class="cs-box" aria-hidden="true">
+              <span class="cs-line cs-line1" aria-hidden="true"></span>
+              <span class="cs-line cs-line2" aria-hidden="true"></span>
+              <span class="cs-line cs-line3" aria-hidden="true"></span>
+            </div>
+          </button>
+          <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+          <div class="cs-ul-wrapper">
+            <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+              <li class="cs-li">
+                <a href="/index.html" class="cs-li-link cs-active"> Home </a>
+              </li>
+              <li class="cs-li">
+                <a href="/about.html" class="cs-li-link"> About </a>
+              </li>
+              <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+              <li class="cs-li cs-dropdown" tabindex="0">
+                <span class="cs-li-link">
+                  Products
+                  <img
+                    class="cs-drop-icon"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
+                    alt="dropdown icon"
+                    width="15"
+                    height="15"
+                    decoding="async"
+                    aria-hidden="true"
+                  />
+                </span>
+                <ul class="cs-drop-ul">
+                  <li class="cs-drop-li">
+                    <a href="Product/sim.html" class="cs-li-link cs-drop-link"
+                      >Multi-carrier SIM</a
+                    >
+                  </li>
+                  <li class="cs-drop-li">
+                    <a href="product1.html" class="cs-li-link cs-drop-link"
+                      >IQMC-520</a
+                    >
+                  </li>
+                  <li class="cs-drop-li">
+                    <a href="product2.html" class="cs-li-link cs-drop-link"
+                      >IQMC-412</a
+                    >
+                  </li>
+                  <li class="cs-drop-li">
+                    <a href="product3.html" class="cs-li-link cs-drop-link"
+                      >IQMC-520XDR</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="cs-li">
+                <a href="/services.html" class="cs-li-link"> Services</a>
+              </li>
+              <li class="cs-li">
+                <a href="/pricing.html" class="cs-li-link"> Plans</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="cs-contact-group">
+          <a href="tel:+84 1985 33 999" class="cs-phone">
+            <img
+              class="cs-phone-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg"
+              alt="logo"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              decoding="async"
+            />
+            +1234567890
+          </a>
+          <div class="cs-social">
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg"
+                alt="logo"
+                width="12"
+                height="12"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="max-w-4xl mx-auto py-12 px-4">
+      <!-- Title -->
+      <div class="text-center mb-12">
+        <h1 class="text-3xl font-bold text-blue-900 mb-4">Terms of Service</h1>
+        <p class="text-lg text-gray-700">
+          By using our services, you agree to the following terms and
+          conditions. Please read carefully.
+        </p>
+      </div>
+
+      <!-- Terms Content -->
+      <div class="bg-white p-6 rounded-lg shadow-lg space-y-6">
+        <h2 class="text-2xl font-semibold text-blue-900">1. Introduction</h2>
+        <p class="text-gray-700">
+          Welcome to our service! These Terms of Service (“Terms”) govern your
+          use of our website, services, and products provided by [Company Name].
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-900">
+          2. Acceptance of Terms
+        </h2>
+        <p class="text-gray-700">
+          By accessing or using our service, you agree to comply with and be
+          bound by these Terms and our Privacy Policy.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-900">
+          3. User Responsibilities
+        </h2>
+        <p class="text-gray-700">
+          Users agree not to use the service for unlawful purposes or in a way
+          that could damage, disable, or overburden our platform.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-900">
+          4. Account Registration
+        </h2>
+        <p class="text-gray-700">
+          Some features may require you to create an account. You must provide
+          accurate information and maintain the confidentiality of your account.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-900">
+          5. Payment and Billing
+        </h2>
+        <p class="text-gray-700">
+          Certain services may require a fee. You agree to pay for the services
+          according to the pricing terms outlined on our website.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-900">6. Termination</h2>
+        <p class="text-gray-700">
+          We may suspend or terminate your account for violations of these Terms
+          or for any unlawful activities.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-900">
+          7. Limitation of Liability
+        </h2>
+        <p class="text-gray-700">
+          Our liability is limited to the maximum extent permitted by law. We
+          are not responsible for indirect or consequential damages.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-900">
+          8. Changes to the Terms
+        </h2>
+        <p class="text-gray-700">
+          We may update these Terms from time to time. The latest version will
+          be posted on our website, and your continued use of the service means
+          you accept the updated Terms.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-900">9. Contact Us</h2>
+        <p class="text-gray-700">
+          If you have any questions or concerns about these Terms, please
+          contact us at [support@example.com].
+        </p>
+      </div>
+
+      <!-- Acknowledgment -->
+      <div class="mt-8 text-center">
+        <p class="text-gray-700">
+          By using our service, you acknowledge that you have read, understood,
+          and agree to abide by these Terms of Service.
+        </p>
+      </div>
+
+      <!-- Action Button -->
+      <div class="mt-6 text-center">
+        <a
+          href="/signup"
+          class="bg-primary-color text-white py-2 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-primary-color"
+        >
+          Agree and Sign Up
+        </a>
+      </div>
+    </div>
+
+    <footer id="cs-footer-1292">
+      <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+          <a aria-label="go back to home" class="cs-logo" href="">
+            <img
+              class="cs-logo-img"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="/assets/img/1 logo.png"
+              alt="logo"
+              width="240"
+              height="32"
+            />
+          </a>
+          <p class="cs-text">Learn more about our mission, values, and team.</p>
+          <a href="mailto:info@mail.com" class="cs-link">
+            <img
+              class="cs-link-icon"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/construction-mail.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+            contact@rvhighspeedinternet.com
+          </a>
+        </div>
+        <!-- Links -->
+        <ul class="cs-nav">
+          <li class="cs-nav-li">
+            <span class="cs-header">Internet</span>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Wireless Internet</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Enterprise</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">WiFi</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Availability</a>
+          </li>
+        </ul>
+        <ul class="cs-nav">
+          <li class="cs-nav-li">
+            <span class="cs-header">Products</span>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="/assets/pages/product1.html"
+              >IQMC-412
+            </a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="/assets/pages/product2.html"
+              >IQMC-520
+            </a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="/assets/pages/product3.html"
+              >IQMC-520XDR
+            </a>
+          </li>
+        </ul>
+        <ul class="cs-nav">
+          <li class="cs-nav-li">
+            <span class="cs-header">Contact</span>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Facebook</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">Instagram</a>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="">LinkedIn</a>
+          </li>
+        </ul>
+        <ul class="cs-nav">
+          <li class="cs-nav-li">
+            <span class="cs-header">Help</span>
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="customersupport.html"
+              >Customer Support</a
+            >
+          </li>
+          <li class="cs-nav-li">
+            <a class="cs-nav-link" href="./support.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="cs-bottom">
+        <span class="cs-copyright"
+          >Copyright© 2023.
+          <a class="cs-copyright-link" href="">OrderTvINternet</a>
+          All Right Reserved.
+        </span>
+        <a href="term.html" class="cs-copyright-link">Terms of Service</a>
+      </div>
+      <!--Floating Cirlces-->
+      <div class="cs-floater" aria-hidden="true"></div>
+    </footer>
+  </body>
+</html>
