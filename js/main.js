@@ -14,42 +14,14 @@ CShamburgerMenu.addEventListener("click", function () {
 // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
 function ariaExpanded() {
   const csUL = document.querySelector("#cs-expanded");
+  const csExpanded = csUL.getAttribute("aria-expanded");
 
-  // Ensure the element exists before proceeding
-  if (!csUL) {
-    console.error("Element #cs-expanded not found.");
-    return;
-  }
-
-  // Get the current state of the aria-expanded attribute
-  let csExpanded = csUL.getAttribute("aria-expanded");
-
-  // If the attribute doesn't exist, initialize it with "false"
-  if (csExpanded === null) {
-    csUL.setAttribute("aria-expanded", "false");
-    csExpanded = "false"; // Update csExpanded to "false" after initializing
-  }
-
-  // Toggle the aria-expanded state
   if (csExpanded === "false") {
     csUL.setAttribute("aria-expanded", "true");
   } else {
     csUL.setAttribute("aria-expanded", "false");
   }
 }
-
-// This script adds a class to the body after scrolling 100px
-// and we used these body.scroll styles to create some on scroll
-// animations with the navbar
-
-document.addEventListener("scroll", (e) => {
-  const scroll = document.documentElement.scrollTop;
-  if (scroll >= 100) {
-    document.querySelector("body").classList.add("scroll");
-  } else {
-    document.querySelector("body").classList.remove("scroll");
-  }
-});
 
 // mobile nav toggle code
 const dropDowns = Array.from(
