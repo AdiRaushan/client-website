@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-
+    <link rel="icon" type="image/x-icon" href="/assets/img/remove logo.png" />
     <!--=============== REMIXICONS ===============-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
@@ -23,7 +23,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>RV HIGH SPEED INTERNET</title>
+    <title>RV High-Speed</title>
   </head>
   <body>
     <!-- Offer Modal -->
@@ -122,97 +122,21 @@
       #CyberMonday: Get the Nomad Air 2 Extreme FREE – Today Only!
     </div>
 
-    <header id="cs-navigation">
-      <div class="cs-container">
-        <!--Nav Logo-->
-        <a href="" class="cs-logo" aria-label="back to home">
-          <img
-            src="/assets/img/1 logo.png"
-            alt="logo"
-            width="210"
-            height="20"
-            aria-hidden="true"
-            decoding="async"
-          />
-        </a>
-        <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
-          <!--Mobile Nav Toggle-->
-          <button class="cs-toggle" aria-label="mobile menu toggle">
-            <div class="cs-box" aria-hidden="true">
-              <span class="cs-line cs-line1" aria-hidden="true"></span>
-              <span class="cs-line cs-line2" aria-hidden="true"></span>
-              <span class="cs-line cs-line3" aria-hidden="true"></span>
-            </div>
-          </button>
-          <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-          <div class="cs-ul-wrapper">
-            <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-              <li class="cs-li">
-                <a href="/index.html" class="cs-li-link cs-active"> Home </a>
-              </li>
-              <li class="cs-li">
-                <a href="/about.html" class="cs-li-link"> About </a>
-              </li>
-              <li class="cs-li cs-dropdown" tabindex="0">
-                <span class="cs-li-link">
-                  Product
-                  <img
-                    class="cs-drop-icon"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
-                    alt="dropdown icon"
-                    width="15"
-                    height="15"
-                    decoding="async"
-                    aria-hidden="true"
-                  />
-                </span>
-                <ul class="cs-drop-ul">
-                  <li class="cs-drop-li">
-                    <a href="Product/sim.html" class="cs-li-link cs-drop-link"
-                      >Multi-carrier SIM</a
-                    >
-                  </li>
-                  <li class="cs-drop-li">
-                    <a
-                      href="Product/product1.html"
-                      class="cs-li-link cs-drop-link"
-                      >IQMC-412</a
-                    >
-                  </li>
-                  <li class="cs-drop-li">
-                    <a
-                      href="Product/product2.html"
-                      class="cs-li-link cs-drop-link"
-                      >IQMC-520</a
-                    >
-                  </li>
-                  <li class="cs-drop-li">
-                    <a
-                      href="Product/product3.html"
-                      class="cs-li-link cs-drop-link"
-                      >IQMC-520XDR</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="cs-li">
-                <a href="services.html" class="cs-li-link"> Services </a>
-              </li>
-              <li class="cs-li">
-                <a href="pricing.html" class="cs-li-link"> Plans</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <a href="" class="cs-button-solid cs-nav-button">Contact Us</a>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
-          <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-          <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
-      </button> -->
-      </div>
-    </header>
+    <div id="navbar-container"></div>
+
+    <script>
+      // Function to load the navbar dynamically from an external file
+      function loadNavbar() {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-container").innerHTML = data;
+          });
+      }
+
+      // Call the loadNavbar function when the page loads
+      loadNavbar();
+    </script>
 
     <!-- ============================================ -->
     <!--                     Hero                     -->
@@ -220,8 +144,12 @@
     <!-- Hero Section -->
     <!-- Hero Section -->
     <div class="bg-[var(--primary)] pt-[12rem] px-8 pb-16 relative">
+      <!-- Vector PNG Design Overlay -->
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-no-repeat bg-contain"
+        style="background-image: url('assets/img/Wave\ Line.svg')"
+      ></div>
       <!-- Top Floating Banners -->
-
       <!-- Hero Content -->
       <div
         class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between relative z-10"
@@ -229,7 +157,7 @@
         <!-- Text Content -->
         <div class="max-w-2xl text-center lg:text-left">
           <h2 class="text-white text-sm font-semibold mb-2">
-            RV SPEED INTERNET BIGGEST OPPENING!
+            RV SPEED INTERNET BIGGEST OPENING!
           </h2>
           <h1
             class="text-4xl lg:text-5xl font-bold mb-4 leading-tight text-[var(--secondary)]"
@@ -256,9 +184,9 @@
           <div class="mt-6 text-sm text-gray-300">
             <p>
               Have Questions? 📞 Call or text us today at
-              <a href="tel:+12818001000" class="text-white font-medium">
-                +1 281 800 1000
-              </a>
+              <a href="tel:+12818001000" class="text-white font-medium"
+                >+1 281 800 1000</a
+              >
             </p>
           </div>
         </div>
@@ -425,58 +353,6 @@
     <!--                Side By Side                  -->
     <!-- ============================================ -->
 
-    <section id="sbs-1591">
-      <div class="cs-container">
-        <div class="cs-image-group">
-          <!--Top left image-->
-          <picture class="cs-picture cs-picture1">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" src="assets/img/RV (1).png" />
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" src="assets/img/RV (1).png" />
-            <img
-              loading="lazy"
-              decoding="async"
-              src="assets/img/RV (1).png"
-              alt="mechanic"
-              width="413"
-              height="500"
-            />
-          </picture>
-          <!--Top Right image-->
-          <picture class="cs-picture cs-picture2">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" src="assets/img/about 2.jpg" />
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" src="assets/img/about 2.jpg" />
-            <img
-              loading="lazy"
-              decoding="async"
-              src="assets/img/about 2.jpg"
-              alt="mechanic"
-              width="413"
-              height="280"
-            />
-          </picture>
-        </div>
-        <div class="cs-content">
-          <span class="cs-topper">Multi-Carrier SIM Card</span>
-          <h2 class="cs-title">
-            Stay connected with our multi-carrier SIM for reliable coverage on
-            multiple networks.
-          </h2>
-          <p class="cs-text">
-            A multi-carrier SIM ensures better connectivity during your RV
-            journey by automatically switching to the best available network,
-            keeping you connected even in remote areas or places with limited
-            coverage. Perfect for navigation, streaming, and staying in touch on
-            the road.
-          </p>
-          <a href="" class="cs-button-solid">Learn More</a>
-        </div>
-      </div>
-    </section>
-
     <!-- ============================================ -->
     <!--             Side By Side Reverse             -->
     <!-- ============================================ -->
@@ -630,6 +506,60 @@
       </div>
     </section>
 
+    <!-- sim section -->
+
+    <section id="sbs-1591">
+      <div class="cs-container">
+        <div class="cs-image-group">
+          <!--Top left image-->
+          <picture class="cs-picture cs-picture1">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" src="assets/img/RV (1).png" />
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" src="assets/img/RV (1).png" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="assets/img/RV (1).png"
+              alt="mechanic"
+              width="413"
+              height="500"
+            />
+          </picture>
+          <!--Top Right image-->
+          <picture class="cs-picture cs-picture2">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" src="assets/img/about 2.jpg" />
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" src="assets/img/about 2.jpg" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="assets/img/about 2.jpg"
+              alt="mechanic"
+              width="413"
+              height="280"
+            />
+          </picture>
+        </div>
+        <div class="cs-content">
+          <span class="cs-topper">Multi-Carrier SIM Card</span>
+          <h2 class="cs-title">
+            Stay connected with our multi-carrier SIM for reliable coverage on
+            multiple networks.
+          </h2>
+          <p class="cs-text">
+            A multi-carrier SIM ensures better connectivity during your RV
+            journey by automatically switching to the best available network,
+            keeping you connected even in remote areas or places with limited
+            coverage. Perfect for navigation, streaming, and staying in touch on
+            the road.
+          </p>
+          <a href="" class="cs-button-solid">Learn More</a>
+        </div>
+      </div>
+    </section>
+
     <!-- comparing section  -->
     <div class="comparison-chart my-12">
       <!-- Text Section for Heading -->
@@ -648,9 +578,9 @@
       <!-- Table Section with Scroll for Mobile -->
       <div class="overflow-x-auto">
         <table
-          class="comparison-table w-11/12 md:w-3/4 lg:w-2/3 mx-auto border-separate border-spacing-0 shadow-md sm:px-4"
+          class="comparison-table w-11/12 md:w-3/4 lg:w-2/3 mx-auto border-separate border-spacing-0 shadow-md sm:px-4 border-black border-solid"
         >
-          <thead class="bg-blue-500 text-white text-lg">
+          <thead class="bg-[--primary] text-white text-lg">
             <tr>
               <th class="px-6 py-4 text-center">Features</th>
               <th class="px-6 py-4 text-center sm:table-cell">RV HIGH SPEED</th>

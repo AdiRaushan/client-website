@@ -17,195 +17,162 @@
     <title>RV HIGH SPEED INTERNET</title>
   </head>
   <body>
-    <header id="cs-navigation">
-      <div class="cs-container">
-        <!--Nav Logo-->
-        <a href="" class="cs-logo" aria-label="back to home">
-          <img
-            src="/assets/img/1 logo.png"
-            alt="logo"
-            width="210"
-            height="20"
-            aria-hidden="true"
-            decoding="async"
-          />
-        </a>
-        <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
-          <!--Mobile Nav Toggle-->
-          <button class="cs-toggle" aria-label="mobile menu toggle">
-            <div class="cs-box" aria-hidden="true">
-              <span class="cs-line cs-line1" aria-hidden="true"></span>
-              <span class="cs-line cs-line2" aria-hidden="true"></span>
-              <span class="cs-line cs-line3" aria-hidden="true"></span>
-            </div>
-          </button>
-          <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-          <div class="cs-ul-wrapper">
-            <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-              <li class="cs-li">
-                <a href="/index.html" class="cs-li-link cs-active"> Home </a>
-              </li>
-              <li class="cs-li">
-                <a href="/about.html" class="cs-li-link"> About </a>
-              </li>
-              <li class="cs-li cs-dropdown" tabindex="0">
-                <span class="cs-li-link">
-                  Product
-                  <img
-                    class="cs-drop-icon"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
-                    alt="dropdown icon"
-                    width="15"
-                    height="15"
-                    decoding="async"
-                    aria-hidden="true"
-                  />
-                </span>
-                <ul class="cs-drop-ul">
-                  <li class="cs-drop-li">
-                    <a href="Product/sim.html" class="cs-li-link cs-drop-link"
-                      >Multi-carrier SIM</a
-                    >
-                  </li>
-                  <li class="cs-drop-li">
-                    <a
-                      href="Product/product1.html"
-                      class="cs-li-link cs-drop-link"
-                      >IQMC-412</a
-                    >
-                  </li>
-                  <li class="cs-drop-li">
-                    <a
-                      href="Product/product2.html"
-                      class="cs-li-link cs-drop-link"
-                      >IQMC-520</a
-                    >
-                  </li>
-                  <li class="cs-drop-li">
-                    <a
-                      href="Product/product3.html"
-                      class="cs-li-link cs-drop-link"
-                      >IQMC-520XDR</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="cs-li">
-                <a href="services.html" class="cs-li-link"> Services </a>
-              </li>
-              <li class="cs-li">
-                <a href="pricing.html" class="cs-li-link"> Plans</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <a href="" class="cs-button-solid cs-nav-button">Contact Us</a>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
-          <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-          <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
-      </button> -->
-      </div>
-    </header>
-    <div class="max-w-4xl mx-auto py-12 px-4">
-      <!-- Title -->
-      <div class="text-center mb-12">
-        <h1 class="text-3xl font-bold text-blue-900 mb-4">Terms of Service</h1>
-        <p class="text-lg text-gray-700">
-          By using our services, you agree to the following terms and
-          conditions. Please read carefully.
+    <div id="navbar-container"></div>
+
+    <script>
+      // Function to load the navbar dynamically from an external file
+      function loadNavbar() {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-container").innerHTML = data;
+          });
+      }
+
+      // Call the loadNavbar function when the page loads
+      loadNavbar();
+    </script>
+    <!--  -->
+    <!-- Hero Section with RV Image -->
+    <section
+      class="relative bg-cover bg-center h-[500px]"
+      style="background-image: url('assets/img/why\ choose\ us\ banner2.webp')"
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="container mx-auto text-center text-white relative py-24">
+        <h1 class="text-5xl font-extrabold">Terms and Services</h1>
+        <p class="text-xl mt-6">
+          Please read the following terms and conditions carefully before using
+          our services.
         </p>
       </div>
+    </section>
 
-      <!-- Terms Content -->
-      <div class="bg-white p-6 rounded-lg shadow-lg space-y-6">
-        <h2 class="text-2xl font-semibold text-blue-900">1. Introduction</h2>
-        <p class="text-gray-700">
-          Welcome to our service! These Terms of Service (“Terms”) govern your
-          use of our website, services, and products provided by [Company Name].
-        </p>
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-16 space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Introduction Section -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+            1. Introduction
+          </h2>
+          <p class="text-gray-700 leading-relaxed">
+            By accessing or using our website, you agree to comply with the
+            terms and conditions outlined in this document. These terms apply to
+            all visitors, users, and others who wish to access or use our
+            services.
+          </p>
+        </div>
 
-        <h2 class="text-2xl font-semibold text-blue-900">
-          2. Acceptance of Terms
+        <!-- Our Services Section -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+            2. Our Services
+          </h2>
+          <p class="text-gray-700 mb-4">
+            We provide a variety of services and products, including:
+          </p>
+          <ul class="list-disc pl-6 space-y-4 text-gray-700">
+            <li>
+              Sales of high-quality routers and related technology products.
+            </li>
+            <li>Customized e-commerce website development for businesses.</li>
+            <li>
+              Customer support services for product installation and
+              troubleshooting.
+            </li>
+            <li>Consulting on technology solutions for business growth.</li>
+            <li>
+              Data protection and security solutions for online platforms.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- User Responsibilities Section -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+            3. User Responsibilities
+          </h2>
+          <p class="text-gray-700 leading-relaxed">
+            Users are required to comply with all applicable laws, rules, and
+            regulations when using our website. You must also ensure that any
+            information you provide is accurate and up-to-date.
+          </p>
+          <ul class="list-disc pl-6 space-y-4 text-gray-700 mt-4">
+            <li>
+              Users should not attempt to access non-public areas of our website
+              or systems.
+            </li>
+            <li>
+              Do not upload or distribute any harmful content that may damage
+              our services or reputation.
+            </li>
+            <li>
+              Be respectful and courteous when interacting with our customer
+              support team.
+            </li>
+            <li>
+              Ensure that your login credentials and account details are kept
+              secure.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Payment and Subscription Section -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+            4. Payment and Subscription
+          </h2>
+          <p class="text-gray-700 leading-relaxed">
+            We accept payments through various online channels, including credit
+            cards, debit cards, and other digital payment methods. All
+            subscriptions and services will be billed according to the plan you
+            choose at the time of registration.
+          </p>
+          <ul class="list-disc pl-6 space-y-4 text-gray-700 mt-4">
+            <li>Payments are non-refundable unless otherwise stated.</li>
+            <li>
+              Subscription renewals will occur automatically unless canceled
+              before the renewal date.
+            </li>
+            <li>
+              You are responsible for updating your payment details if
+              necessary.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Privacy Policy Section -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+          5. Privacy Policy
         </h2>
-        <p class="text-gray-700">
-          By accessing or using our service, you agree to comply with and be
-          bound by these Terms and our Privacy Policy.
-        </p>
-
-        <h2 class="text-2xl font-semibold text-blue-900">
-          3. User Responsibilities
-        </h2>
-        <p class="text-gray-700">
-          Users agree not to use the service for unlawful purposes or in a way
-          that could damage, disable, or overburden our platform.
-        </p>
-
-        <h2 class="text-2xl font-semibold text-blue-900">
-          4. Account Registration
-        </h2>
-        <p class="text-gray-700">
-          Some features may require you to create an account. You must provide
-          accurate information and maintain the confidentiality of your account.
-        </p>
-
-        <h2 class="text-2xl font-semibold text-blue-900">
-          5. Payment and Billing
-        </h2>
-        <p class="text-gray-700">
-          Certain services may require a fee. You agree to pay for the services
-          according to the pricing terms outlined on our website.
-        </p>
-
-        <h2 class="text-2xl font-semibold text-blue-900">6. Termination</h2>
-        <p class="text-gray-700">
-          We may suspend or terminate your account for violations of these Terms
-          or for any unlawful activities.
-        </p>
-
-        <h2 class="text-2xl font-semibold text-blue-900">
-          7. Limitation of Liability
-        </h2>
-        <p class="text-gray-700">
-          Our liability is limited to the maximum extent permitted by law. We
-          are not responsible for indirect or consequential damages.
-        </p>
-
-        <h2 class="text-2xl font-semibold text-blue-900">
-          8. Changes to the Terms
-        </h2>
-        <p class="text-gray-700">
-          We may update these Terms from time to time. The latest version will
-          be posted on our website, and your continued use of the service means
-          you accept the updated Terms.
-        </p>
-
-        <h2 class="text-2xl font-semibold text-blue-900">9. Contact Us</h2>
-        <p class="text-gray-700">
-          If you have any questions or concerns about these Terms, please
-          contact us at [support@example.com].
+        <p class="text-gray-700 leading-relaxed">
+          We value your privacy and are committed to protecting your personal
+          information. Please review our
+          <a href="#" class="text-blue-500 hover:underline">Privacy Policy</a>
+          to understand how we collect, use, and safeguard your data.
         </p>
       </div>
 
-      <!-- Acknowledgment -->
-      <div class="mt-8 text-center">
-        <p class="text-gray-700">
-          By using our service, you acknowledge that you have read, understood,
-          and agree to abide by these Terms of Service.
+      <!-- Modifications and Termination Section -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+          6. Modifications and Termination
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+          We reserve the right to modify these terms at any time. Any changes
+          will be effective immediately upon posting. Additionally, we can
+          suspend or terminate your access to our website if you violate any of
+          the terms outlined.
         </p>
-      </div>
-
-      <!-- Action Button -->
-      <div class="mt-6 text-center">
-        <a
-          href="/signup"
-          class="bg-primary-color text-white py-2 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-primary-color"
-        >
-          Agree and Sign Up
-        </a>
       </div>
     </div>
+
+    <!--  -->
 
     <footer id="cs-footer-1292">
       <div class="cs-container">

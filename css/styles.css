@@ -3914,6 +3914,7 @@ main .text-data h1 {
 @media only screen and (min-width: 0rem) {
   #sbs-1591 {
     padding: var(--sectionPadding);
+    padding-top: 3rem;
   }
   #sbs-1591 .cs-container {
     width: 100%;
