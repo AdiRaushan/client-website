@@ -14,12 +14,18 @@
 
 html,
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Hide horizontal overflow */
 }
 
+img,
+.container,
+.element {
+  max-width: 100%; /* Ensure the width does not exceed the viewport */
+  height: auto; /* Maintain aspect ratio */
+}
 *,
 *:before,
 *:after {
