@@ -10,6 +10,8 @@
   --bodyTextColor: #4e5b6a; /* Muted blue-gray for body text */
   --bodyTextColorWhite: #ffffff; /* White for text on dark backgrounds */
   --sectionPadding: clamp(8rem, 7vw, 6rem) 1rem;
+  /* Replace this: */
+  -ms-high-contrast-adjust: auto;
 }
 
 html,

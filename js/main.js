@@ -36,30 +36,6 @@ for (const item of dropDowns) {
 
 /*  prodct js */
 
-const imgs = document.querySelectorAll(".img-select a");
-const imgBtns = [...imgs];
-let imgId = 1;
-
-imgBtns.forEach((imgItem) => {
-  imgItem.addEventListener("click", (event) => {
-    event.preventDefault();
-    imgId = imgItem.dataset.id;
-    slideImage();
-  });
-});
-
-function slideImage() {
-  const displayWidth = document.querySelector(
-    ".img-showcase img:first-child"
-  ).clientWidth;
-
-  document.querySelector(".img-showcase").style.transform = `translateX(${
-    -(imgId - 1) * displayWidth
-  }px)`;
-}
-
-window.addEventListener("resize", slideImage);
-
 /* FAQ */
 const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
 for (const item of faqItems) {
@@ -125,3 +101,17 @@ leadForm.addEventListener("submit", (e) => {
   console.log("Form Submitted!");
   modal.classList.add("hidden");
 });
+
+/* testing  */
+function slideImage() {
+  const imgShowcase = document.querySelector(".img-showcase img:first-child");
+  if (!imgShowcase) {
+    console.error("No images found in .img-showcase.");
+    return;
+  }
+
+  const displayWidth = imgShowcase.clientWidth;
+  document.querySelector(".img-showcase").style.transform = `translateX(${
+    -(imgId - 1) * displayWidth
+  }px)`;
+}
